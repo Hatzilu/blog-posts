@@ -2,10 +2,11 @@
 import Link from "next/link";
 
 import styles from "./index.module.css";
+import { BASE_URL } from "@/consts/consts";
 
 export default async function Home() {
 
-  const a = await fetch('http://localhost:3000/api/posts');
+  const a = await fetch(BASE_URL+'/api/posts');
   const data = await a.json();
 
   console.log(data);
